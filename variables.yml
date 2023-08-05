@@ -1,0 +1,8 @@
+variables:
+  - name: var001
+    value: 111
+  environmentName: "dev"
+  vmImageName: "ubuntu-latest"
+  webAppName: "nestedyamltemplates-dev"
+  azureServiceConnection: "nestedyamltemplates"
+  
