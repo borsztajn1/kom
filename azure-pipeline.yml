@@ -1,0 +1,50 @@
+# Starter pipeline
+
+#- task: VariableSetTask@3
+#  inputs:
+#    variableName: 'aaaa'
+#    value: '11'
+#    IsOutput: true
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+#
+
+#https://www.youtube.com/watch?v=S-copHTFW2I
+#https://www.youtube.com/watch?v=cjZm-AqGagM
+
+#https://learn.microsoft.com/en-us/samples/azure-samples/azure-pipelines-variable-templates/azure-pipelines-variable-templates/
+
+#https://learn.microsoft.com/en-us/answers/questions/1183828/pass-variable-values-from-yml-to-json-files-in-azu
+
+####
+#https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=yaml
+#https://stackoverflow.com/questions/75062339/azure-devops-powershell-can-i-build-the-variable-string-for-a-library-group-va
+
+#Azure DevOps Variables in Pipelines
+#https://www.youtube.com/watch?v=AiowJwJtn6A
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+#variables:
+#- name: eee001
+#  type: 345
+#- group: varGroup001
+#- template: variables.yml
+#  parameters:
+#    azureServiceConnection: ${{ variables.azureServiceConnection  }}
+#    webAppName: ${{ variables.webAppName  }}
+#- bash:|
+#    echo "##vso[task.setvariable variable=myVar;]foo"
+
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
